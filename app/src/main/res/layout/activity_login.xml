@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     android:id="@+id/activity_login"
-    tools:context="com.example.administrator.First.LoginActivity">
+    tools:context="com.example.administrator.first.LoginActivity">
 
     <LinearLayout
         android:id="@+id/Login_LinearLayout_Back"
@@ -17,26 +18,28 @@
             android:orientation="horizontal"
             android:gravity="center"
             >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="11dp"
-                android:text="返回"
-                android:textSize="17sp" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@android:drawable/ic_menu_revert" />
+
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginTop="2dp"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
         android:text="账号密码登录"
         android:textColor="#FFFFFF"
         android:background="#FF7F50"
         android:textSize="17sp"
-        android:layout_below="@+id/Login_LinearLayout_Back"
         android:gravity="center"
+        android:layout_marginBottom="29dp"
+        android:layout_above="@+id/Login_LinearLayout_Phone"
         android:layout_centerHorizontal="true" />
 
     <LinearLayout
@@ -44,9 +47,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="43dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true">
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp">
         <LinearLayout
             android:layout_width="80dp"
             android:layout_height="48dp"
@@ -76,7 +79,8 @@
         android:orientation="horizontal"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/Login_LinearLayout_Phone"
-        android:layout_alignStart="@+id/Login_LinearLayout_Phone">
+        android:layout_alignStart="@+id/Login_LinearLayout_Phone"
+        android:id="@+id/linearLayout">
         <LinearLayout
             android:layout_width="80dp"
             android:layout_height="48dp"
@@ -86,7 +90,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="密码："
+                android:text="密   码："
                 android:textSize="16sp"
                 android:textColor="#000000"
                 />
